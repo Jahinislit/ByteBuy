@@ -17,6 +17,9 @@ import {
 } from 'react-native';
 import AppText from './AppText';
 import QuickActionButton from './QuickActionButton';
+import ProductDetails from '@app/screens/ProductDetails';
+
+
 
 type ProductCardProps = {
   style?: ViewStyle;
@@ -67,6 +70,8 @@ export default ({
 }: ProductCardProps): JSX.Element => {
   const isValidImage = productDetails?.thumbnail !== '';
 
+ 
+
   const imageSource = isValidImage
     ? {uri: productDetails?.thumbnail}
     : ProductFallbackImage;
@@ -92,8 +97,8 @@ export default ({
 
       <PaddingContainer style={{paddingHorizontal: 17, paddingVertical: 17}}>
         <FlexContainer position="rowBetween" direction="row">
-          <AppText fontSize="regular">{`$${
-            productDetails?.price || 0
+          <AppText fontSize="regular">{`₹${
+            productDetails?.price
           }`}</AppText>
           <QuickActionButton
             style={styles.addToCardButton}

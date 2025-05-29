@@ -15,6 +15,8 @@ type ProductType = {
   title: string;
   description: string;
   price: number;
+  priceFormatted: string;
+  originalPriceUSD?: number;
   discountPercentage?: number;
   rating?: number;
   stock: number;

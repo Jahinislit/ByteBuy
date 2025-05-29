@@ -29,6 +29,11 @@ import {
   View,
 } from 'react-native';
 
+const formatPriceINR = (priceUSD: number): string => {
+  const inrPrice = priceUSD * 83.5;
+  return `₹${inrPrice.toFixed(0)}`;
+};
+
 const PriceAndDiscountIndicator = ({
   price,
   discount,
@@ -38,12 +43,12 @@ const PriceAndDiscountIndicator = ({
 }): JSX.Element => {
   return (
     <FlexContainer position="start" direction="row">
-      <AppText color="PrimaryBlue" fontFamily="ManropeBold">{`$${
-        price || 0
+      <AppText color="PrimaryBlue" fontFamily="ManropeBold">{`${
+        formatPriceINR(price)
       }`}</AppText>
       <Spacer space={10} between />
       <View style={styles.discountTextHolder}>
-        <AppText color="PureWhite">{`$${discount}OFF`}</AppText>
+        <AppText color="PureWhite">{`${formatPriceINR(discount||0)}  OFF`}</AppText>
       </View>
     </FlexContainer>
   );
@@ -53,6 +58,8 @@ type ProductDetailsScreenProps = BottomTabScreenProps<
   AppScreensParamsList,
   'ProductDetails'
 >;
+
+
 
 export default ({navigation, route}: ProductDetailsScreenProps) => {
   const {id: productId} = route.params && route.params.product;

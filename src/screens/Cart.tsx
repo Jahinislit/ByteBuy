@@ -14,6 +14,8 @@ import {ArrowIcon} from '@assets/svg';
 import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
 
+
+
 const RenderOrderDetailsText = ({
   title,
   value,
@@ -26,7 +28,7 @@ const RenderOrderDetailsText = ({
       <FlexContainer direction="row" position="rowBetween">
         <AppText color="LightGrey">{title}</AppText>
         <AppText color="GreyDark" fontFamily="ManropeMedium">
-          {`$${value || 0}`}
+          {`₹${value||0}`}
         </AppText>
       </FlexContainer>
       <Spacer space={13} />
@@ -36,18 +38,19 @@ const RenderOrderDetailsText = ({
 
 type CartScreenProps = BottomTabScreenProps<AppScreensParamsList, 'Cart'>;
 
+
 export default ({navigation}: CartScreenProps) => {
   const store = useCartStore();
 
   const isCartEmpty = store.cart.length === 0;
-  const DELIVERY_COST = 20.45;
+  const DELIVERY_COST = 199;
 
   const getTotalCartPrice = (): number => {
     const totalCartPrice = store.cart.reduce((total, item) => {
       return total + item.quantity * item.product.price;
     }, 0);
 
-    return totalCartPrice;
+    return Math.round(totalCartPrice);
   };
 
   return (

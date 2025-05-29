@@ -19,6 +19,7 @@ import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 import {useIsFocused} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {RefreshControl, StyleSheet, TextInput, View} from 'react-native';
+import { convertProductPriceToINR } from '@app/utils/convertPrice';
 
 
 
@@ -40,8 +41,9 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
 
       if (Array.isArray(data.products) && data.products.length) {
         const updatedProducts = data.products.map((product: ProductType) => {
+          const convertedProduct = convertProductPriceToINR(product);
           return {
-            ...product,
+            ...convertedProduct,
             isFavorite: store.favorites.some(
               favorite => favorite.id === product.id
             ),
@@ -53,6 +55,8 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
       console.error('Failed to get products list!', error);
     }
   };
+
+  
 
   const navigateToProductDetails = (product: ProductType) => {
     navigation.navigate('ProductDetails', {product});
@@ -101,7 +105,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
         <FlexContainer position="rowBetween" direction="row">
           <DropdownSelector
             title="Delivery to"
-            selectedValue="700035   Kolkata,  West Bengal"
+            selectedValue="700036   Kolkata,  West Bengal"
             onPress={value => alert(value)}
           />
         </FlexContainer>

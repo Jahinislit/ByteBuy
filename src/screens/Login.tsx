@@ -105,12 +105,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   headerText: {
-    fontSize: 40,
+    fontSize: 54,
     color: 'white',
     fontWeight: '600',
   },
   subHeaderText: {
-    fontSize: 32,
+    fontSize: 29,
     color: 'white',
     fontWeight: '600',
     marginBottom: 30,
