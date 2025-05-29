@@ -20,13 +20,18 @@ import {useIsFocused} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {RefreshControl, StyleSheet, TextInput, View} from 'react-native';
 
+
+
 type HomeScreenProps = BottomTabScreenProps<AppScreensParamsList, 'HomeScreen'>;
+
+
 
 export default ({navigation}: HomeScreenProps): JSX.Element => {
   const [productList, setProductList] = useState<ProductType[]>();
 
   const store = useCartStore();
   const isFocused = useIsFocused();
+
 
   const getProductsList = async () => {
     try {
@@ -75,7 +80,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
             style={{fontSize: 22}}
             color="PureWhite"
             fontFamily="ManropeSemiBold">
-            Hey, Rahul
+            Hey, User
           </AppText>
           <CartButtonWithIndicator
             quantity={store.cart.length || 0}
@@ -88,7 +93,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
           <Spacer space={12} between />
           <TextInput
             style={styles.textInput}
-            placeholderTextColor={AppColors.GreyLightest}
+            placeholderTextColor={AppColors.PureWhite}
             placeholder="Search Products or store"
           />
         </View>
@@ -96,12 +101,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
         <FlexContainer position="rowBetween" direction="row">
           <DropdownSelector
             title="Delivery to"
-            selectedValue="Green Way 3000, Sylhet"
-            onPress={value => alert(value)}
-          />
-          <DropdownSelector
-            title="Within"
-            selectedValue="1 Hour"
+            selectedValue="700035   Kolkata,  West Bengal"
             onPress={value => alert(value)}
           />
         </FlexContainer>
@@ -140,7 +140,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
           <RefreshControl
             refreshing={productList?.length === 0}
             onRefresh={getProductsList}
-            tintColor={AppColors.PrimaryBlue}
+            tintColor="#1a1a1a"
           />
         }
         onAddToCart={handleOnAddToCart}
@@ -152,7 +152,7 @@ export default ({navigation}: HomeScreenProps): JSX.Element => {
 
 const styles = StyleSheet.create({
   extendedHeader: {
-    backgroundColor: AppColors.PrimaryBlue,
+    backgroundColor: "#1a1a1a",
     padding: 20,
   },
   container: {
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     borderRadius: 100,
-    backgroundColor: AppColors.DarkBlue,
+    backgroundColor: "#737373",
     paddingHorizontal: 28,
     flexDirection: 'row',
     alignItems: 'center',

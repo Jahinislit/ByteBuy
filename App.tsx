@@ -1,21 +1,24 @@
 import BottomNavBar from '@app/navigation/BottomNavBar';
-import {CartScreen, ProductDetailsScreen} from '@app/screens';
-import {AppScreensParamsList} from '@app/types';
-import {AppColors} from '@app/utils';
+import WelcomeScreen from '@app/screens/Welcome';
+import LoginScreen from '@app/screens/Login';
+import { CartScreen, ProductDetailsScreen } from '@app/screens';
+import { AppScreensParamsList } from '@app/types';
+import { AppColors } from '@app/utils';
 import {
   ManropeBold,
   ManropeMedium,
   ManropeRegular,
   ManropeSemiBold,
 } from '@assets/fonts';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   NativeStackNavigationOptions,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import {useFonts} from 'expo-font';
+import { useFonts } from 'expo-font';
 import React from 'react';
 import Toast from 'react-native-toast-message';
+
 
 function App(): JSX.Element | null {
   const Stack = createNativeStackNavigator<AppScreensParamsList>();
@@ -41,26 +44,38 @@ function App(): JSX.Element | null {
   };
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="BottomNavBar"
-          component={BottomNavBar}
-          options={screensOptions}
-        />
-        <Stack.Screen
-          name="ProductDetails"
-          component={ProductDetailsScreen}
-          options={screensOptions}
-        />
-        <Stack.Screen
-          name="Cart"
-          component={CartScreen}
-          options={screensOptions}
-        />
-      </Stack.Navigator>
-      <Toast />
-    </NavigationContainer>
+    
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Welcome">
+          <Stack.Screen
+            name="Welcome"
+            component={WelcomeScreen}
+            options={screensOptions}
+          />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={screensOptions}
+          />
+          <Stack.Screen
+            name="BottomNavBar"
+            component={BottomNavBar}
+            options={screensOptions}
+          />
+          <Stack.Screen
+            name="ProductDetails"
+            component={ProductDetailsScreen}
+            options={screensOptions}
+          />
+          <Stack.Screen
+            name="Cart"
+            component={CartScreen}
+            options={screensOptions}
+          />
+        </Stack.Navigator>
+        <Toast />
+      </NavigationContainer>
+    
   );
 }
 

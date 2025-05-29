@@ -1,4 +1,4 @@
-package com.shopzy.app;
+package com.ByteBuy.app;
 
 import android.os.Build;
 import android.os.Bundle;

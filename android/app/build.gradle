@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.shopzy.app'
+    namespace 'com.ByteBuy.app'
     defaultConfig {
-        applicationId 'com.shopzy.app'
+        applicationId 'com.ByteBuy.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

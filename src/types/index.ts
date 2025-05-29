@@ -1,4 +1,6 @@
 type AppScreensParamsList = {
+  Welcome: undefined;
+  Login: undefined;
   HomeScreen: undefined;
   CategoriesScreen: undefined;
   FavoritesScreen: undefined;

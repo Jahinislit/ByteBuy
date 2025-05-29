@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Shopzy",
-    "slug": "Shopzy",
+    "name": "ByteBuy",
+    "slug": "ByteBuy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -14,14 +14,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.shopzy.app"
+      "bundleIdentifier": "com.ByteBuy.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.shopzy.app"
+      "package": "com.ByteBuy.app"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
