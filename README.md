@@ -4,12 +4,12 @@
 
 # App Screenshots
 <p align="left">
-  <img src = "https://github.com/Jahinislit/ByteBuy/blob/main/assets/798ea788-70da-4ee2-be4a-d242f46ac0da.jpg" width="180' alt ="Welcome">
-  <img src = "https://github.com/Jahinislit/ByteBuy/blob/main/assets/507ed542-6a89-4b51-b33d-2523993863c3.jpg" width="180" alt="Login">
-  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/d36ec13b-d680-4dfe-99b5-6ae089d12368.jpg" width="180" alt="Home">
-  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/1d57e3a5-77ff-4b04-abfd-9c25d432ea9c.jpg" width="180" alt="Product Details">
-  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/cd636468-93b2-4159-8be0-c329507e85cc.jpg" width="180" alt="Fav">
-  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/51b8283b-20cc-4598-b054-6abf93a203fb.jpg" width="180" alt="Cart">
+  <img src = "https://github.com/Jahinislit/ByteBuy/blob/main/assets/798ea788-70da-4ee2-be4a-d242f46ac0da.jpg" width="150' alt ="Welcome">
+  <img src = "https://github.com/Jahinislit/ByteBuy/blob/main/assets/507ed542-6a89-4b51-b33d-2523993863c3.jpg" width="150" alt="Login">
+  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/d36ec13b-d680-4dfe-99b5-6ae089d12368.jpg" width="150" alt="Home">
+  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/1d57e3a5-77ff-4b04-abfd-9c25d432ea9c.jpg" width="150" alt="Product Details">
+  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/cd636468-93b2-4159-8be0-c329507e85cc.jpg" width="150" alt="Fav">
+  <img src="https://github.com/Jahinislit/ByteBuy/blob/main/assets/51b8283b-20cc-4598-b054-6abf93a203fb.jpg" width="150" alt="Cart">
 </p>
 
 ### Technical Details
