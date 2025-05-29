@@ -21,20 +21,20 @@
 - Clone the repo HTTPS:
 
 ```
-git clone https://github.com/zxcodes/ByteBuy.git
+git clone https://github.com/Jahinislit/ByteBuy.git
 
 ```
 
 - Clone Over SSH:
 
 ```
-git clone git@github.com:zxcodes/ByteBuy.git
+git clone git@github.com:Jahinislit/ByteBuy.git
 ```
 
 ## Install dependencies
 
 ```
-cd ByteBuy && yarn install
+cd ByteBuy && npm install
 ```
 
 ## To install any expo dependency use yarn package manager:
