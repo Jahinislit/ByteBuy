@@ -1,5 +1,7 @@
 # ByteBuy Mobile App
 
+- A Full Fledged E-Commerce App built with React Native , Typescript , Zustand. with a modern and clean UI
+
 # App Screenshots
 <p align="left">
   <img src = "https://github.com/Jahinislit/ByteBuy/blob/main/assets/798ea788-70da-4ee2-be4a-d242f46ac0da.jpg" width="150' alt ="Welcome">
